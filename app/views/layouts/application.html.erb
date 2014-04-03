@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fantasy: Game of Thrones</title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body id="full">
+   <div class="off-canvas-wrap" id="full">
+    <div class="inner-wrap" id="full" >
+      <nav class="tab-bar">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+
+        <section class="middle tab-bar-section">
+          <h1 class="title">Fantasy: Game of Thrones</h1>
+        </section>
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><label>Characters</label></li>
+          <li><%= link_to "List All", characters_path %></li>
+          <li><%= link_to "Add New", new_character_path %></li>
+          <li><label>Users</label></li>
+          <li><%= link_to "List All", users_path %></li>
+          <li><%= link_to "Add New", new_user_path %></li>
+        </ul>
+      </aside>
+
+      <section class="main-section center">
+        <!-- content goes here -->
+                <%= yield %>
+      </section>
+
+    <a class="exit-off-canvas"></a>
+
+    </div>
+  </div>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

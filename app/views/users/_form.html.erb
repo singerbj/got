@@ -1,0 +1,18 @@
+<%= form_for @user do |f| %>
+    <% @user.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :c1 %>
+    <%= f.collection_select :c1, Character.order(:name),:id,:name, include_blank: true %>
+    <%= f.label :c2 %>
+    <%= f.collection_select :c2, Character.order(:name),:id,:name, include_blank: true %>
+    <%= f.label :c3 %>
+    <%= f.collection_select :c3, Character.order(:name),:id,:name, include_blank: true %>
+    <%= f.label :c4 %>
+    <%= f.collection_select :c4, Character.order(:name),:id,:name, include_blank: true %>
+    <%= f.label :c5 %>
+    <%= f.collection_select :c5, Character.order(:name),:id,:name, include_blank: true %>
+    <%= f.submit 'Submit', :class => 'button' %>
+<% end %>

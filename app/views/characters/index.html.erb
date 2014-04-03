@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="small-6 small-centered columns">
+
+<h1>Characters</h1>
+
+<table width="100%">
+  <thead>
+    <th class="center">Name</th>
+    <th class="center">Total Points</th>
+  </thead>
+  <% for character in @characters %>
+    <tr>
+      <td><%= link_to character.name, edit_character_path(character) %></td>
+      <td><%= character.total_points %></td>
+    </tr>
+  <% end %>
+</table>
+  
+  </div>
+</div>

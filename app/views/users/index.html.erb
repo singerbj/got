@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="small-6 small-centered columns">
+
+<h1>All Users</h1>
+
+<table width="100%">
+  <thead>
+    <th class="center">Name</th>
+    <th class="center">Total Points</th>
+  </thead>
+  <% for user in @users %>
+    <tr>
+      <td><%= link_to user.name, edit_user_path(user) %></td>
+      <td><%= user.total_points %></td>
+    </tr>
+  <% end %>
+</table>
+
+  </div>
+</div>

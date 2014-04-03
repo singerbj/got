@@ -1,0 +1,22 @@
+<%= form_for @character do |f| %>
+    <% @character.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :storm_of_swords %>
+    <%= f.text_field :storm_of_swords%>
+    <%= f.label :feast_for_crows %>
+    <%= f.text_field :feast_for_crows%>
+    <%= f.label :breaking_the_law %>
+    <%= f.text_field :breaking_the_law%>
+    <%= f.label :bolton_knows_best %>
+    <%= f.text_field :bolton_knows_best %>
+    <%= f.label :best_served_cold %>
+    <%= f.text_field :best_served_cold%>
+    <%= f.label :in_littlefingers_brothel%>
+    <%= f.text_field :in_littlefingers_brothel%>
+    <%= f.label :you_win_or_you_die %>
+    <%= f.text_field :you_win_or_you_die%>
+    <%= f.submit 'Submit', :class => 'button' %>
+<% end %>
