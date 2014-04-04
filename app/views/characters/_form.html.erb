@@ -1,6 +1,6 @@
 <%= form_for @character do |f| %>
     <% @character.errors.full_messages.each do |msg| %>
-      <p><%= msg %></p>
+      <%= msg %><br>
     <% end %>
     <%= f.label :name %>
     <%= f.text_field :name %>
