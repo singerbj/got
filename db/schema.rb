@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403214702) do
+ActiveRecord::Schema.define(version: 20140404003110) do
 
   create_table "characters", force: true do |t|
     t.integer  "storm_of_swords"
