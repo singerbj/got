@@ -2,21 +2,47 @@
     <% @character.errors.full_messages.each do |msg| %>
       <%= msg %><br>
     <% end %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :storm_of_swords %>
-    <%= f.text_field :storm_of_swords%>
-    <%= f.label :feast_for_crows %>
-    <%= f.text_field :feast_for_crows%>
-    <%= f.label :breaking_the_law %>
-    <%= f.text_field :breaking_the_law%>
-    <%= f.label :bolton_knows_best %>
-    <%= f.text_field :bolton_knows_best %>
-    <%= f.label :best_served_cold %>
-    <%= f.text_field :best_served_cold%>
-    <%= f.label :in_littlefingers_brothel%>
-    <%= f.text_field :in_littlefingers_brothel%>
-    <%= f.label :you_win_or_you_die %>
-    <%= f.text_field :you_win_or_you_die%>
+    <table width="100%">
+      <tr>
+        <td>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </td>
+        <td>
+          <%= f.label :storm_of_swords %>
+          <%= f.text_field :storm_of_swords%>
+        </td>
+      </tr> 
+      <tr>
+        <td>
+          <%= f.label :feast_for_crows %>
+          <%= f.text_field :feast_for_crows%>
+        </td>
+        <td>
+          <%= f.label :breaking_the_law %>
+          <%= f.text_field :breaking_the_law%>
+        </td>
+      </tr> 
+      <tr>
+        <td>
+          <%= f.label :bolton_knows_best %>
+          <%= f.text_field :bolton_knows_best %>
+        </td>
+        <td>
+          <%= f.label :best_served_cold %>
+          <%= f.text_field :best_served_cold%>
+        </td>
+      </tr> 
+      <tr>
+        <td>
+          <%= f.label :in_littlefingers_brothel%>
+          <%= f.text_field :in_littlefingers_brothel%>
+        </td>
+        <td>
+          <%= f.label :you_win_or_you_die %>
+          <%= f.text_field :you_win_or_you_die%>
+        </td>
+      </tr>
+    </table> 
     <%= f.submit 'Submit', :class => 'button' %>
 <% end %>
